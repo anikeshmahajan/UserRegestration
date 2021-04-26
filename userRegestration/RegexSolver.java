@@ -8,7 +8,7 @@ public class RegexSolver  {
   String validLastNameFormat = "^[A-Z][a-z]{2,}";
   String validEmailRegex = "[a-zA-Z0-9_.]+@[a-zA-Z0-9]+.[a-zA-Z]{2,3}[.] {0,1}[a-zA-Z]+";
   String validMobileNo = "^[0-9]{2}[ ][0-9]{10}$";
-  String validPassword = "^((?=.*[A-Z])[a-zA-Z0-9]{8,})$";
+  String validPassword = "^((?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,})$";
   void validate(String userInput )
 	 {
 		
