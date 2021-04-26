@@ -6,7 +6,9 @@ import java.util.regex.Pattern;
 public class RegexSolver  {	
   String validFirstNameFormat = "^[A-Z][a-z]{2,}";
   String validLastNameFormat = "^[A-Z][a-z]{2,}";
-	void validate(String userInput )
+  String validEmailRegex = "[a-zA-Z0-9_.]+@[a-zA-Z0-9]+.[a-zA-Z]{2,3}[.] {0,1}[a-zA-Z]+";
+  String validMobileNo = "^[0-9]{2}[ ][0-9]{10}$";
+  void validate(String userInput )
 	 {
 		
 		Pattern compile =Pattern.compile( validFirstNameFormat  ); 
@@ -53,4 +55,41 @@ void validatelastName(String userInput )
 	
 	
    }
+
+
+  void checkEmailId(String  userInput) {
+	
+	  Pattern compile =Pattern.compile( validEmailRegex ); 
+		
+		Matcher match= compile.matcher(userInput);
+		
+		Boolean result = match.matches();
+		
+	if (result) {
+		System.out.println("Email Id Is Valid");
+
+	}else 
+		System.out.println("Invalid Email Id");
+
+	}
+  
+		
+		  void checkMobileNo(String userInput) {
+            
+			  Pattern compile =Pattern.compile( validMobileNo ); 
+				
+				Matcher match= compile.matcher(userInput);
+				
+				Boolean result = match.matches();
+				
+            
+                    if (result) {
+                            System.out.println("Your Moile No is Valid");
+
+                    }else System.out.println("Your Mobile No is Invalid");
+
+                    
+
+	
+}
 }
