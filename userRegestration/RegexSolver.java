@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class RegexSolver  {	
   String validFirstNameFormat = "^[A-Z][a-z]{2,}";
   String validLastNameFormat = "^[A-Z][a-z]{2,}";
-  String validEmailRegex = "[a-zA-Z0-9_.]+@[a-zA-Z0-9]+.[a-zA-Z]{2,3}[.] {0,1}[a-zA-Z]+";
+  String validEmailRegex = "/^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})/";
   String validMobileNo = "^[0-9]{2}[ ][0-9]{10}$";
   void validate(String userInput )
 	 {
